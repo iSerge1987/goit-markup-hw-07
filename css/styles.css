@@ -582,7 +582,7 @@ address {
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   background-color: var(--background-color-secondary);
-  /*filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));*/
+  /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15)); */
   color: rgba(255, 255, 255, 0.6);
   font-size: 16px;
   line-height: var(--line-height-125);
@@ -637,15 +637,26 @@ button[type="submit"] {
 }
 
 .modal {
-  display: flex;
-  flex-direction: column;
-  justify-self: center;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  min-width: 528px;
-  min-height: 581px;
+  display: flex;
+  align-items: center;
+  justify-self: start;
+  padding: 1%;
+  height: 100%;
+}
+
+.modal-container {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  position: relative;
+  width: 100%;
+  max-width: 528px;
+  height: 100%;
+  max-height: 581px;
   background-color: var(--background-base-color);
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -654,6 +665,8 @@ button[type="submit"] {
   transition-duration: var(--transition-duration-hover);
   transition-timing-function: var(--transition-timing-hover);
   padding: 40px;
+  margin-top: 10%;
+  overflow-y: auto;
 }
 
 .modal .title {
@@ -664,7 +677,7 @@ button[type="submit"] {
   margin-bottom: 12px;
 }
 
-.inputs {
+.modal-form {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -726,25 +739,30 @@ button[type="submit"] {
 
 .contract {
   position: relative;
-  display: block;
-  margin: auto;
-  text-align: center;
-  width: 425px;
-  font-size: 14px;
-  line-height: var(--line-height-171);
-  letter-spacing: 0.03em;
-  color: var(--text-color-secondary);
+  display: flex;
   margin-bottom: 30px;
 }
 
-.contract-text {
-  outline: none;
-  color: var(--brand-color);
-  text-decoration: underline;
+.check-icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--text-color-primary);
+  border-radius: 2px;
+  fill: var(--background-base-color);
+  background-color: var(--background-base-color);
+  transition: background-color var(--transition-duration-hover) var(--transition-timing-hover);
+  /* transition-property: background-color, border-color;
+  transition-duration: var(--transition-duration-hover)
+  transition-timing-function: var(--transition-timing-hover); */
+
 }
 
-.form-check,
-.form-check:focus {
+.check-input,
+.check-input:focus {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -756,36 +774,29 @@ button[type="submit"] {
   outline: none;
 }
 
-.check {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  width: 15px;
-  height: 14px;
-  background-color: var(--background-base-color);
-  border: 2px solid var(--text-color-primary);
-  border-radius: 2px;
+/* .check-input:focus + .check-icon {
+  border: 2px solid #188CE8;
+} */
+
+.check-label {
+  position: relative;
+  padding-left: 24px;
 }
 
-.check-icon {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  width: 16px;
-  height: 15px;
-  opacity: 0;
-  transition: opacity var(--transition-duration-hover) var(--transition-timing-hover);
+.contract-text {
+  outline: none;
+  color: var(--brand-color);
+  text-decoration: underline;
 }
 
-.form-check:checked ~ .check-icon {
-  opacity: 1;
-  z-index: 1;
-}
+/* .contract-text:focus {
+  color: #188CE8;
+} */
 
-.form-check:checked ~ .check {
-  visibility: hidden;
+.check-input:checked ~ .check-icon {
+  background-color: var(--brand-color);
+  border: none;
+  /* border-color: var(--brand-color); */
 }
 
 .modal .send {

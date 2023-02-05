@@ -1,0 +1,35 @@
+/* projects-section */
+  .projects__section {
+    padding-top: 0;
+  }
+
+/* .projects__list {
+    display: flex;
+    gap: 30px;
+  } */
+
+  .project__item {
+    width: 370px;
+    height: 294px;
+  }
+
+  .project__link {
+    position: relative;
+  }
+
+  .project__title {
+    display: flex;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(47, 48, 58, 0.8);
+    color: $txt-color-invert;
+    font-size: 14px;
+    line-height: $lh-114;
+ /* letter-spacing: 0.03em; */
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+  }

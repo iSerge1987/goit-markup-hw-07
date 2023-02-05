@@ -1,0 +1,37 @@
+body {
+    background-color: $bg-color-primary;
+    color: $txt-color-primary;
+    font-family: Roboto, sans-serif;
+    letter-spacing: 0.03em;
+  }
+
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  
+  .section__title {
+    font-size: 36px;
+    line-height: $lh-117;
+    text-align: center;
+    /* letter-spacing: 0.03em; */
+    margin-bottom: 50px;
+  }
+  
+  .container {
+    margin: 0 auto;
+    width: 1200px;
+    padding: 0 15px;
+  }
+  
+  .list {
+    display: flex;
+    gap: 30px;
+  }
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }

@@ -1,0 +1,31 @@
+/* Button Close */
+  .btnClose {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: $bg-color-primary;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    padding: 5px;
+  }
+
+  .btnClose__icon {
+    width: 18px;
+    height: 18px;
+    fill: #000000;
+  }
+
+  .btnClose:hover .btnClose__icon,
+  .btnClose:focus .btnClose__icon {
+    fill: $brand-color;
+    cursor: pointer;
+  }
+  
+  .btnClose:focus {
+    outline: none;
+  }

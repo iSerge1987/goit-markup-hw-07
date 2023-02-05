@@ -1,0 +1,25 @@
+%link-icon {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    @include transition(color);
+ /* transition: color $transition-duration-hover $transition-timing-hover; */
+}
+
+.social__link {
+    @extend %link-icon;
+    border-radius: 50%;
+    color: $color-secondary;
+    @include transition(background-color);
+ /* transition: background-color $transition-duration-hover $transition-timing-hover; */}
+
+.clients__link {
+    @extend %link-icon;
+    border: 1px solid $color-secondary;
+    border-radius: 4px;
+    color: $color-secondary;
+    @include transition(border-color);
+ /* transition: border-color $transition-duration-hover $transition-timing-hover; */
+}

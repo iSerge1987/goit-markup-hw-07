@@ -1,0 +1,44 @@
+/* social-link */
+ /* @import 'link-icon'; */
+
+  .social__list {
+    display: flex;
+    gap: 10px;
+  }
+
+  .social__item {
+    width: 44px;
+    height: 44px;
+  }
+  
+ /* @import 'link-icon'; */
+/* .social__link {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: $color-secondary;
+    transition-property: color, background-color, border-radius;
+    transition-duration: $transition-duration-hover;
+    transition-timing-function: $transition-timing-hover;
+  } */
+
+  .social__link--invert {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: $txt-color-invert;
+  }
+  
+  .social__link:hover,
+  .social__link:focus {
+    outline: none;
+    background-color: $brand-color;
+    color: $txt-color-invert;
+  }
+  
+  .social__icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+  }

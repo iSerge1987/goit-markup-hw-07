@@ -1,0 +1,58 @@
+/* checkBox */
+
+/* Check Policy */
+  .contract {
+    position: relative;
+    display: flex;
+    margin-bottom: 30px;
+  }
+
+  .check__icon {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 15px;
+    border: 2px solid $txt-color-primary;
+    border-radius: 2px;
+    background-color: $bg-color-primary;
+    fill: $bg-color-primary;
+    @include transition(background-color);
+ /* transition-property: background-color, border-color;
+    transition-duration: $transition-duration-hover;
+    transition-timing-function: $transition-timing-hover; */
+  }
+
+  .check__input,
+  .check__input:focus {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip:rect(0 0 0 0);
+    overflow: hidden;
+    outline: none;
+  }
+
+  .check__label {
+    position: relative;
+    padding-left: 24px;
+  }
+
+  .contract__text {
+    outline: none;
+    color: $brand-color;
+    text-decoration: underline;
+  }
+
+/* .contract__text:focus {
+    color: #188CE8;
+  } */
+
+  .check__input:checked ~ .check__icon {
+    background-color: $brand-color;
+    border: none;
+  }

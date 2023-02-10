@@ -5,6 +5,28 @@
     position: relative;
     display: flex;
     margin-bottom: 30px;
+    color: $txt-color-secondary;
+    font-size: 12px;
+    line-height: $lh-117;
+
+    @media screen and (min-width:1200px) {
+      font-size: 14px;
+    }
+
+    &__text {
+      outline: none;
+      color: $brand-color;
+      text-decoration: underline;
+    }
+  }
+
+  /* &__text:focus {
+      color: #188CE8;
+    } */
+  
+  .check__label {
+    position: relative;
+    padding-left: 18px;
   }
 
   .check__icon {
@@ -12,8 +34,8 @@
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    width: 16px;
-    height: 15px;
+    width: 14px;
+    height: 13px;
     border: 2px solid $txt-color-primary;
     border-radius: 2px;
     background-color: $bg-color-primary;
@@ -24,8 +46,7 @@
     transition-timing-function: $transition-timing-hover; */
   }
 
-  .check__input,
-  .check__input:focus {
+  .check__input {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -36,21 +57,6 @@
     overflow: hidden;
     outline: none;
   }
-
-  .check__label {
-    position: relative;
-    padding-left: 24px;
-  }
-
-  .contract__text {
-    outline: none;
-    color: $brand-color;
-    text-decoration: underline;
-  }
-
-/* .contract__text:focus {
-    color: #188CE8;
-  } */
 
   .check__input:checked ~ .check__icon {
     background-color: $brand-color;

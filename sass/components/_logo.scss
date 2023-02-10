@@ -1,26 +1,32 @@
-/* logo */
-  .logo {
-    font-family: Raleway, Oleo Script, sans-serif;
-    font-weight: 700;
+  /* logo */
+@mixin logo-color($logoColor) {
+  color: $logoColor;
+}
+
+.logo {
+  color: $brand-color;
+  font-family: Raleway, Oleo Script, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: $lh-117;
+  text-align: center;
+
+  @media screen and (min-width: 1200px) {
     font-size: 26px;
     line-height: $lh-119;
- /* letter-spacing: 0.03em; */
-    color: $brand-color;
-  }
-
-  @mixin logo-color($logoColor) {
-    color: $logoColor;
-  }
-
-  .logo--dark {
+    text-align: left;
+  } 
+ 
+  &--dark {
     @include logo-color($txt-color-primary);
   }
 
-  .logo--light {
+  &--light {
     @include logo-color($txt-color-invert);
   }
 
-  .logo:hover,
-  .logo:focus {
+  &:hover,
+  &:focus {
     outline: none;
   }
+}

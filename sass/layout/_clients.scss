@@ -1,37 +1,28 @@
-/* clients-section */
- /* @import 'link-icon'; */
-
-/* .clients__list {
-  	display: flex;
-  	gap: 30px;
-	} */
-
+  /* Team Section */
 .clients__item {
-    width: 170px;
-    height: 92px;
+  height: 92px;
+  width: calc((100% - (5*30px))/6);
+
+  @media screen and (max-width: 1199px) {
+    width: calc((100% - (2*30px))/3);
   }
- /* @import 'link-icon'; */
-/* .clients__link { 
-    display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid $color-secondary;
-    border-radius: 4px;
-    color: $color-secondary;
-    transition-property: color, border-color;
-	  transition-duration: $transition-duration-hover;
-  	transition-timing-function: $transition-timing-hover;
-	} */
+
+  @media screen and (max-width: 767px) {
+    width: calc((100% - (1*30px))/2);
+  }
+}
   
-  .clients__link:hover,
-  .clients__link:focus {
+.clients__link {
+  @import '../components/link-icon';
+
+  &:hover,
+  &:focus {
     outline: none;
     color: $brand-color;
     border-color: $brand-color;
   }
-  
-  .clients__icon {
-    fill: currentColor;
-  }
+}
+
+.clients__icon {
+  fill: currentColor;
+}

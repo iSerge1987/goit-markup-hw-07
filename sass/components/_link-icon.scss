@@ -5,7 +5,6 @@
     justify-content: center;
     align-items: center;
     @include transition(color);
- /* transition: color $transition-duration-hover $transition-timing-hover; */
 }
 
 .social__link {
@@ -13,7 +12,7 @@
     border-radius: 50%;
     color: $color-secondary;
     @include transition(background-color);
- /* transition: background-color $transition-duration-hover $transition-timing-hover; */}
+}
 
 .clients__link {
     @extend %link-icon;
@@ -21,5 +20,4 @@
     border-radius: 4px;
     color: $color-secondary;
     @include transition(border-color);
- /* transition: border-color $transition-duration-hover $transition-timing-hover; */
 }

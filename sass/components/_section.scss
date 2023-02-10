@@ -1,1 +1,14 @@
-/* sections */
+  /* sections */
+.section__title {
+  font-size: 28px;
+  line-height: $lh-1178;
+  text-align: center;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+    line-height: $lh-117;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+}  

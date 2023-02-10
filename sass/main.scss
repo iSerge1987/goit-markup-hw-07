@@ -1,9 +1,9 @@
 @import './utils/fonts';
 @import './utils/variables';
-@import './utils/placeholders';
 @import './utils/mixins';
+// @import './utils/placeholders';
 @import './base/reset';
 @import './base/base';
 
-@import './layout/index';
 @import './components/index';
+@import './layout/index';

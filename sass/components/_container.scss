@@ -1,1 +1,19 @@
-/* container */
+  /* container */
+.container {
+  margin: 0 auto;
+  padding: 60px 15px;
+  width: 100%;
+
+  @media screen and (min-width: 480px) {
+    width: calc(480px - 18px);
+  }
+
+  @media screen and (min-width: 768px) {
+    width: calc(768px - 18px);
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+    padding: 94px 15px;
+  }
+}  

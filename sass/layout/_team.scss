@@ -1,70 +1,41 @@
-/* team-section */
- /* @import 'social-link'; */
+  /* Team Section */
+.team__section {
+  background-color: $bg-color-secondary;
+}
 
-  .team__section {
-    background-color: $bg-color-secondary;
+.team__thumb {
+  background-color: $txt-color-invert;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - (1*30px))/2);
   }
 
-/* .team__list {
-    display: flex;
-    gap: 30px;
-  } */
-
-  .team__thumb {
-    width: 270px;
-    background-color: $txt-color-invert;
-    border-radius: 0px 0px 4px 4px;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - (3*30px))/4);
   }
+}
 
-  .team__content {
-    padding: 30px 32px;
-    font-size: 16px;
-    line-height: $lh-118;
-    text-align: center;
- /* letter-spacing: 0.03em; */
-  }
+.team__content {
+  padding: 30px 0;
+  font-size: 16px;
+  line-height: $lh-118;
+  text-align: center;
+}
 
-  .team__title {
-    font-weight: 500;
-    margin-bottom: 10px;
-  }
+.team__title {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
 
-  .team__text {
-    color: $txt-color-secondary;
-    margin-bottom: 16px;
-  }
+.team__text {
+  color: $txt-color-secondary;
+  margin-bottom: 16px;
+}
 
-/* .social__list {
-    display: flex;
-    gap: 10px;
-  } */
-
- /* @import 'social-link'; */
-
-/* .social__link {
-    display: flex;
-    width: 44px;
-    height: 44px;
-    justify-content: center;
-    align-items: center;
-    color: $color-secondary;
-    transition-property: color, background-color, border-radius;
-    transition-duration: $transition-duration-hover;
-    transition-timing-function: $transition-timing-hover;
-  }
-
-  .social__link:hover,
-  .social__link:focus {
-    color: $txt-color-invert);
-    background-color: $brand-color;
-    border-radius: 50%;
-  }
-
-  .social__icon {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    fill: currentColor;
-  } */
+ /* .social__link {
+  @import '../components/social-link';
+ } */

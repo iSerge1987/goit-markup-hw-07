@@ -1,11 +1,8 @@
 /* Modal Form */
- /* @import 'button'; */
- /* @import 'btn-close'; */
 
   .form__title {
     font-size: 20px;
     line-height: 1.15;
- /* letter-spacing: 0.03em; */
     text-align: center;
     margin-bottom: 12px;
   }
@@ -39,7 +36,6 @@
     border-radius: 4px;
     padding-left: 42px;
     @include transition(border-color);
- /* transition: border-color $transition-duration-hover $transition-timing-hover; */
   }
   
     .form__icon {
@@ -74,126 +70,12 @@
     letter-spacing: 0.01em;
   }
 
-  .contract {
-    position: relative;
-    display: flex;
-    margin-bottom: 30px;
-  }
-
-  .check__icon {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    width: 16px;
-    height: 15px;
-    border: 2px solid $txt-color-primary;
-    border-radius: 2px;
-    fill: $bg-color-primary;
-    background-color: $bg-color-primary;
-    @include transition(background-color);
- /* transition-property: background-color, border-color;
-    transition-duration: $transition-duration-hover;
-    transition-timing-function: $transition-timing-hover; */
-  }
-
-  .check__input,
-  .check__input:focus {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    clip:rect(0 0 0 0);
-    overflow: hidden;
-    outline: none;
-  }
-
-  .check__label {
-    position: relative;
-    padding-left: 24px;
-  }
-
-  .contract__text {
-    outline: none;
-    color: $brand-color;
-    text-decoration: underline;
-  }
-
-  .contract__text:focus {
-    color: #188CE8;
-  }
-
-  .check__input:checked ~ .check__icon {
-    background-color: $brand-color;
-    border: none;
-  }
-
- /* @import 'button'; */
-/* .btnSubmit {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
-    height: 50px;
-    border: none;
-    border-radius: 4px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    background-color: $brand-color;
-    color: $txt-color-invert;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: $lh-188;
-    letter-spacing: 0.06em;
-    padding: 10px auto;
-  }
-  
-  .btnSubmit:focus,
-  .btnSubmit:hover {
-    cursor: pointer;
-    outline: none;
-  } */
-
   .formModal__btnSubmit {
     margin: auto;
     @include transition(background-color);
- /* transition: background-color $transition-duration-hover $transition-timing-hover; */
   }
 
   .formModal__btnSubmit:focus,
   .formModal__btnSubmit:hover {
     background-color: #188CE8;
   } 
-
- /* @import 'btn-close'; */
-/* .btnClose {
-    position: absolute;
-    display: flex;
-    top: 8px;
-    right: 8px;
-    width: 30px;
-    height: 30px;
-    padding: 5px;
-    justify-content: center;
-    align-items: center;
-    background-color: $bg-color-primary;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
-  }
-
-  .btnClose__icon {
-    display: block;
-    width: 18px;
-    height: 18px;
-    fill: #000000;
-  }
-
-  .btnClose:focus {
-    outline: none;
-  }
-  .btnClose:hover .btnClose__icon,
-  .btnClose:focus .btnClose__icon {
-    fill: $brand-color;
-    cursor: pointer;
-  } */

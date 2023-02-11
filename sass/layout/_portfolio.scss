@@ -23,10 +23,14 @@
 
 .portfolio__btn:hover,
 .portfolio__btn:focus {
-  outline: none;
   background-color: $brand-color;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
   color: $txt-color-invert;
+
+    // &:focus {
+    //   outline: 2px solid $brand-color;
+    // }
+
 }
 
 .portfolio__list {
@@ -42,19 +46,27 @@
   @include transition(box-shadow);
   overflow: hidden;
   width: 100%;
-  
   @media screen and (min-width: 768px) {
     width: calc((100% - (1*30px))/2);
   }
-
   @media screen and (min-width: 1200px) {
     width: calc((100% - (2*30px))/3);
   }
-}
 
-.portfolio__thumb--overlay {
-  position: relative;
-  overflow: hidden;
+  &--overlay {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+
+  &:hover .portfolio__text--overlay,
+  &:focus .portfolio__text--overlay {
+    transform: translateY(-100%);
+  }
 }
 
 .portfolio__text--overlay {
@@ -68,16 +80,6 @@
   line-height: $lh-156;
   transform: translateY(0);
   @include transition(transform);
-}
-
-.portfolio__thumb:hover,
-.portfolio__thumb:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
-.portfolio__thumb:hover .portfolio__text--overlay,
-.portfolio__thumb:focus .portfolio__text--overlay {
-  transform: translateY(-100%);
 }
 
 .portfolio__content {

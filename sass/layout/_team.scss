@@ -9,11 +9,9 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   width: 100%;
-
   @media screen and (min-width: 768px) {
     width: calc((100% - (1*30px))/2);
   }
-
   @media screen and (min-width: 1200px) {
     width: calc((100% - (3*30px))/4);
   }
@@ -36,6 +34,6 @@
   margin-bottom: 16px;
 }
 
- /* .social__link {
-  @import '../components/social-link';
- } */
+/* .social__link {
+@import '../components/social-link';
+} */

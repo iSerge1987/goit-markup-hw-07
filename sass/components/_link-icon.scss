@@ -1,23 +1,23 @@
-%link-icon {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    @include transition(color);
-}
+// %link-icon {
+//     display: flex;
+//     width: 100%;
+//     height: 100%;
+//     justify-content: center;
+//     align-items: center;
+//     @include transition(color);
+// }
 
-.social__link {
-    @extend %link-icon;
-    border-radius: 50%;
-    color: $color-secondary;
-    @include transition(background-color);
-}
+// .social__link {
+//     // @extend %link-icon;
+//     // border-radius: 50%;
+//     // color: $color-secondary;
+//     // @include transition(background-color);
+// }
 
-.clients__link {
-    @extend %link-icon;
-    border: 1px solid $color-secondary;
-    border-radius: 4px;
-    color: $color-secondary;
-    @include transition(border-color);
-}
+// .clients__link {
+//     // @extend %link-icon;
+//     // border: 1px solid $color-secondary;
+//     // border-radius: 4px;
+//     // color: $color-secondary;
+//     // @include transition(border-color);
+// }

@@ -2,11 +2,9 @@
 .features__thumb {
   font-size: 14px;
   width: 100%;
-
   @media screen and (min-width: 768px) {
     width: calc((100% - (1*30px))/2);
   }
-
   @media screen and (min-width: 1200px) {
     width: calc((100% - (3*30px))/4);
   }
@@ -32,7 +30,6 @@
   line-height: $lh-114;
   text-transform: uppercase;
   margin-bottom: 10px;
-
   @media screen and (max-width: 767px) {
     text-align: center;
   }

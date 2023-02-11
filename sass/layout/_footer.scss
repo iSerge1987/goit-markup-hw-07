@@ -43,6 +43,7 @@
   @media screen and (min-width: 768px) {   
     margin-top: 5px;
   }
+
   @media screen and (min-width: 1200px) {   
     text-align: left;
     margin-top: 12px;
@@ -78,9 +79,9 @@
   width: 206px;
 }
 
- /* .social__link {
-  @import '../components/social-link';
- } */
+/* .social__link {
+@import '../components/social-link';
+} */
  
 .subscribe__form {
   display: flex;
@@ -98,7 +99,6 @@
     @media screen and (min-width: 480px) {   
       width: 450px;
     }
-    
     @media screen and (min-width: 1200px) {   
       width: 358px;
     }
@@ -118,7 +118,6 @@
    
   // .subscribe__btnSubmit {
   //   gap: 10px;
-
   //   // @media screen and (max-width: 1199px) {   
   //   //   gap: 10px;
   //   // }

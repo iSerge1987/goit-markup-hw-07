@@ -1,19 +1,21 @@
   /* Team Section */
 .clients__item {
   height: 92px;
-  width: calc((100% - (5*30px))/6);
-
-  @media screen and (max-width: 1199px) {
+  width: calc((100% - (1*30px))/2);
+  @media screen and (min-width: 768px) {
     width: calc((100% - (2*30px))/3);
   }
-
-  @media screen and (max-width: 767px) {
-    width: calc((100% - (1*30px))/2);
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - (5*30px))/6);
   }
 }
   
 .clients__link {
-  @import '../components/link-icon';
+  @extend %link-icon;
+  border: 1px solid $color-secondary;
+  border-radius: 4px;
+  color: $color-secondary;
+  @include transition(border-color);
 
   &:hover,
   &:focus {

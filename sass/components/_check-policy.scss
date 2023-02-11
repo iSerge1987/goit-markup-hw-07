@@ -1,64 +1,53 @@
-/* checkBox */
+  /* checkBox */
 
-/* Check Policy */
-  .contract {
-    position: relative;
-    display: flex;
-    margin-bottom: 30px;
-    color: $txt-color-secondary;
-    font-size: 12px;
-    line-height: $lh-117;
-
-    @media screen and (min-width:1200px) {
-      font-size: 14px;
-    }
-
-    &__text {
-      outline: none;
-      color: $brand-color;
-      text-decoration: underline;
-    }
+  /* Check Policy */
+.contract {
+  position: relative;
+  display: flex;
+  margin-bottom: 30px;
+  color: $txt-color-secondary;
+  font-size: 12px;
+  line-height: $lh-117;
+  @media screen and (min-width:1200px) {
+    font-size: 14px;
   }
 
-  /* &__text:focus {
-      color: #188CE8;
-    } */
-  
-  .check__label {
-    position: relative;
-    padding-left: 18px;
-  }
-
-  .check__icon {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    width: 14px;
-    height: 13px;
-    border: 2px solid $txt-color-primary;
-    border-radius: 2px;
-    background-color: $bg-color-primary;
-    fill: $bg-color-primary;
-    @include transition(background-color);
- /* transition-property: background-color, border-color;
-    transition-duration: $transition-duration-hover;
-    transition-timing-function: $transition-timing-hover; */
-  }
-
-  .check__input {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    clip:rect(0 0 0 0);
-    overflow: hidden;
+  &__text {
     outline: none;
+    color: $brand-color;
+    text-decoration: underline;
   }
+}
 
-  .check__input:checked ~ .check__icon {
+/* &__text:focus {
+    color: #188CE8;
+  } */
+
+.check__label {
+  position: relative;
+  padding-left: 18px;
+}
+
+.check__icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 13px;
+  border: 2px solid $txt-color-primary;
+  border-radius: 2px;
+  background-color: $bg-color-primary;
+  fill: $bg-color-primary;
+  @include transition(background-color);
+}
+
+.check__input {
+  @extend %visually-hidden;
+  outline: none;
+
+  &:checked ~ .check__icon {
     background-color: $brand-color;
     border: none;
   }
+}

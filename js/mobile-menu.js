@@ -5,5 +5,6 @@
     menuBtnRef.addEventListener("click", () => {
       menuBtnRef.classList.toggle("is-open");
       mobileMenuRef.classList.toggle("is-open");
+      document.body.classList.toggle("modal-open")
     })
   })();

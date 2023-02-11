@@ -1,25 +1,4 @@
   /* buttons */
-%button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: nowrap;
-  gap: 10px;
-  width: 200px;
-  height: 50px;
-  border: none;
-  border-radius: 4px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  background-color: $brand-color;
-  color: $txt-color-invert;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: $lh-188;
-  letter-spacing: 0.06em;
-  // white-space: nowrap;
-  padding: 10px auto;
-  cursor: pointer;
-  }
 
   /* Hero Button */
 .hero__btn {
@@ -75,30 +54,49 @@
 }
 
   /* Button Menu Toggle */
-.btnMenu-toggle__icon {
-  margin: 0;
-  padding: 0;
+.btnMenu-toggle {
+  position: absolute;
+  top: 10px;
+  right: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
-  background-color: transparent;
+  padding: 0;
+  // width: 40px;
+  // height: 40px;
   border: none;
+  background-color: transparent;
   
+  @media screen and (min-width:768px) {
+    display: none;
+  }
+
   &__icon {
+    margin: 7px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // width: 100%;
+    // height: 100%;
     width: 24px;
-    height: 16px;
+    height: 24px;
     fill: #000000;
-  }
-  
-  &:hover &__icon,
-  &:focus &__icon {
-    fill: $brand-color;
-    cursor: pointer;
-  }
-  
-  &:focus {
-    outline: none;
+    background-color: transparent;
+    border: none;
+    // z-index: 9;
+
+    // & .icon-close {
+
+    // }
+    
+    &:hover,
+    &:focus {
+      fill: $brand-color;
+      cursor: pointer;
+    }
+    
+    &:focus {
+      outline: none;
+    }
   }
 }

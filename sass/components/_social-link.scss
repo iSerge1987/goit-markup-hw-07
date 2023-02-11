@@ -1,6 +1,4 @@
   /* social-link */
- /* @import 'link-icon'; */
-
 .social__item {
   width: 44px;
   height: 44px;
@@ -13,12 +11,16 @@
 }
 
 .social__link {
-  @import 'link-icon';
+  @extend %link-icon;
+  border-radius: 50%;
+  background-color: $bg-color-primary;
+  color: $color-secondary;
+  @include transition(background-color);
 
-  &--invert {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: $txt-color-invert;
-  }
+  // &--invert {
+  //   // background-color: rgba(255, 255, 255, 0.1);
+  //   // color: $txt-color-invert;
+  // }
     
   &:hover,
   &:focus {
@@ -28,8 +30,8 @@
   }
 }
   
-  .social__icon {
-    width: 20px;
-    height: 20px;
-    fill: currentColor;
-  }
+.social__icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}

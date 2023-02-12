@@ -1,9 +1,18 @@
   /* Portfolio Section */
 .portfolio__nav {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 8px;
   margin-bottom: 50px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 40px;
+    justify-content: flex-start;
+  }
+  @media screen and (max-width: 1200px) {
+    margin-bottom: 30px;
+  }
+
 }
 
 .portfolio__btn {
